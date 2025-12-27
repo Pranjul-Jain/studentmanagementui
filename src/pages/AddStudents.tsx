@@ -1,16 +1,7 @@
 import { Button, Grid } from "@mui/material";
-import React from "react";
 import { useFormik } from "formik";
 import { db } from "../config/firebase";
-import {
-  addDoc,
-  collection,
-  doc,
-  getDocs,
-  query,
-  setDoc,
-  where,
-} from "firebase/firestore";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import FormikCustomTextField from "../components/FormikCustomTextField";
 import FormikCustomSelectField from "../components/FormikCustomSelectField";
 import { useNavigate } from "react-router-dom";

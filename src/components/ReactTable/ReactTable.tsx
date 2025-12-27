@@ -9,14 +9,10 @@ import {
   TableRow,
   TableFooter,
   TableContainer,
-  Link,
   Grid,
   Button,
   Box,
-  CircularProgress,
-  Chip,
   TextField,
-  Tooltip,
   Breadcrumbs,
 } from "@mui/material";
 import TablePaginationActions from "./TablePaginationActions";
@@ -43,12 +39,12 @@ const ReactTable = ({
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [dataCount, setTotalDataCount] = React.useState(0);
   const [search, setSearch] = React.useState(initialSearch);
-  const [loading, setLoading] = React.useState(false);
-  const [filterData, setFilterData] = React.useState(initialData);
   const navigate = useNavigate();
   const role = useAppSelector((state) => state.auth.role);
 
   const handleChangePage = (event: any, newPage: any) => {
+    if (event) {
+    }
     setPage(newPage);
   };
 
@@ -56,17 +52,7 @@ const ReactTable = ({
     setRowsPerPage(parseInt(event.target.value, 10));
   };
 
-  return loading ? (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <CircularProgress />
-    </Box>
-  ) : (
+  return (
     <Box
       sx={{
         background: "#fff",

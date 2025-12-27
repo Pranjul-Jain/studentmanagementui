@@ -1,6 +1,4 @@
-import React from "react";
 import { useRoutes } from "react-router-dom";
-import Login from "../pages/Login";
 import routes from "../config/routes";
 import PublicRoute from "../components/Routers/PublicRoute";
 import ProtectedRoute from "../components/Routers/ProtectedRoute";

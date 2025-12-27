@@ -1,12 +1,11 @@
 import { onAuthStateChanged } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { auth, db } from "../config/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useAppDispatch } from "../app/hooks";
 import { login } from "../features/auth/slice/AuthSlice";
 
 const useAuth = () => {
-  const [user, setUser] = React.useState({});
   const [laoding, setLoading] = React.useState(true);
   const dispatch = useAppDispatch();
 
@@ -20,7 +19,7 @@ const useAuth = () => {
     });
   }, []);
 
-  return [user, laoding];
+  return [{}, laoding];
 
   async function loginUser(user: any) {
     try {

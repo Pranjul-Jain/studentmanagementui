@@ -1,6 +1,5 @@
-import CustomFormLabel from "./CustomSelect";
 import CustomSelect from "./CustomSelect";
-import { FormHelperText, MenuItem, Typography } from "@mui/material";
+import { MenuItem, Typography } from "@mui/material";
 
 interface propTypes {
   title: string;

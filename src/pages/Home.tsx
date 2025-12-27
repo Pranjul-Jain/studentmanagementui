@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppSelector } from "../app/hooks";
-import useAuth from "../hooks/useAuth";
 import ReactTable from "../components/ReactTable/ReactTable";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "../config/firebase";

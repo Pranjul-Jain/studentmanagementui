@@ -1,8 +1,5 @@
-import { useState } from "react";
 import CustomFormLabel from "./CustomFormLabel";
 import CustomTextField from "./CustomTextField";
-import { IconButton, InputAdornment } from "@mui/material";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 interface propTypes {
   formik: any;

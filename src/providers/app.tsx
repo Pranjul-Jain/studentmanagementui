@@ -1,6 +1,5 @@
 import { CircularProgress } from "@mui/material";
 import React from "react";
-
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <React.Suspense
